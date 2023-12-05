@@ -1,12 +1,10 @@
-import './App.css'
-import ColorfulCounter from './colorfulCounter'
+import '@/App.css'
+import ColorfulCounter from '@components/ColorfulCounter/ColorfulCounter'
 
 function App() {
 
   return (
-    <>
-      <ColorfulCounter></ColorfulCounter>
-    </>
+      <ColorfulCounter/>
   )
 }
 

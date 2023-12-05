@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ColorfulDiv } from "@components/ColorfulCounter/style";
 
 function ColorfulCounter() {
     const [count, setCount] = useState(0)
@@ -7,12 +8,13 @@ function ColorfulCounter() {
 
     return (
         <>
-            <div style={{ color: textColor }}> count = {count}</div>
-            <button onClick={() => setCount(count + 1)} >
-                點我哇！
-            </button>
+        <ColorfulDiv $color={textColor}>count = {count}</ColorfulDiv>
+        <button onClick={() => setCount(count + 1)} >
+            點我哇！
+        </button>
         </>
     )
 }
+
 
 export default ColorfulCounter;
