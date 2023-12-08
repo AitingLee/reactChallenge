@@ -136,6 +136,7 @@ const HeroLeftButton = styled.button`
     width: 268px;
     flex-shrink: 1;
     border: 0;
+    font-size: 16px;
     @media (max-width: 680px) {
         margin: 12vw 0 0 0;
         height: 36px;
