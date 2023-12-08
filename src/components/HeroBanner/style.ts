@@ -181,7 +181,7 @@ const HeroRightVideoDefault = styled.div`
 
 const HeroRightVideoButton = styled.button`
     
-    width: 134px;
+    width: 20%;
     aspect-ratio: 1;
     background-image: url(${videoButtonDefault});
     background-position: center;
@@ -193,9 +193,6 @@ const HeroRightVideoButton = styled.button`
     justify-content: center;
     padding: 0;
     border: 0;
-    @media (max-width: 680px) {
-        width: 70px;
-    }
 
     &:hover{
         background-image: url(${videoButtonHover});
