@@ -4,8 +4,9 @@ import heroImageMobile from '@assets/bg-herosession-mobile.png';
 import videoImageLaptop from '@assets/img-videodefault-laptop.png';
 import videoImageMobile from '@assets/img-videodefault-mobile.png';
 
-import videoButtonDefaultLaptop from '@assets/Btn-default.png';
-import videoButtonHoverLaptop from '@assets/Btn-hover.png';
+import videoButtonDefault from '@assets/Btn-default.png';
+import videoButtonHover from '@assets/Btn-hover.png';
+import videoButtonArrow from '@assets/Btn-arrow.png';
 
 const HeroDiv = styled.div`
     background-image: url(${heroImageLaptop});
@@ -123,6 +124,7 @@ const HeroLeftButton = styled.button`
     height: 47px;
     width: 268px;
     flex-shrink: 1;
+    border: 0;
     @media (max-width: 680px) {
         margin: 12vw 0 0 0;
         height: 36px;
@@ -130,6 +132,11 @@ const HeroLeftButton = styled.button`
     }
     @media (max-width: 355px) {
         margin: 6vw 0 0 0;
+    }
+
+    &:hover{
+        background: linear-gradient(152deg, #FF2A2D 8.49%, #F7DC16 92.21%);
+        cursor: pointer;
     }
 `;
 
@@ -142,12 +149,13 @@ const HeroRightDiv = styled.div`
     margin: 120px 51px 0 20px;
     
     @media (max-width: 680px) {
-        width: 100%;
-        height: 50%;
         margin:0 ;
-        display: flex;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        justify-items:center;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
+        align-content: center;
     }
 `;
 
@@ -161,26 +169,50 @@ const HeroRightVideoDefault = styled.div`
     grid-column: 1;
     grid-row: 1;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (max-width: 680px) {
         width: 93.6vw;
-        src: url(${videoImageMobile});
+        aspect-ratio: calc(351/205);
+        background-image: url(${videoImageMobile});
     }
 `;
 
-const HeroRightVideoButton = styled.div`
-    aspect-ratio: calc(669/452);
-    background-image: url(${videoImageLaptop});
+const HeroRightVideoButton = styled.button`
+    
+    width: 134px;
+    aspect-ratio: 1;
+    background-image: url(${videoButtonDefault});
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-
-    grid-column: 1;
-    grid-row: 1;
-
+    background-color:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
     @media (max-width: 680px) {
-        width: 93.6vw;
-        src: url(${videoImageMobile});
+        width: 70px;
+    }
+
+    &:hover{
+        background-image: url(${videoButtonHover});
+        cursor: pointer;
     }
 `;
 
-export { HeroDiv, HeroLeftDiv, HeroLeftTitle, HeroLeftContent, HeroLeftButton, HeroRightDiv, HeroRightVideoDefault};
+const HeroRightVideoButtonArrow = styled.div`
+    width: 39.13%;
+    aspect-ratio: calc(159/177);
+    background-image: url(${videoButtonArrow});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+`;
+
+export {
+    HeroDiv, HeroLeftDiv, HeroLeftTitle, HeroLeftContent, HeroLeftButton,
+    HeroRightDiv, HeroRightVideoDefault, HeroRightVideoButton, HeroRightVideoButtonArrow
+};

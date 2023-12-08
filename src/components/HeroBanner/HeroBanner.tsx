@@ -1,4 +1,4 @@
-import { HeroDiv, HeroLeftButton, HeroLeftContent, HeroLeftDiv, HeroLeftTitle, HeroRightDiv, HeroRightVideoDefault } from "@components/HeroBanner/style";
+import { HeroDiv, HeroLeftButton, HeroLeftContent, HeroLeftDiv, HeroLeftTitle, HeroRightDiv, HeroRightVideoButton, HeroRightVideoButtonArrow, HeroRightVideoDefault } from "@components/HeroBanner/style";
 
 
 
@@ -8,7 +8,7 @@ function HeroBanner() {
             <HeroLeftDiv>
                 <HeroLeftTitle>Your Virtual Campus for Online Learning</HeroLeftTitle>
                 <HeroLeftContent>
-                    Bring the benefits of in-person learning to an online environment. 
+                    Bring the benefits of in-person learning to an online environment.
                 </HeroLeftContent>
                 <HeroLeftContent>
                     Explore virtual learning spaces, engage with the class through customizable avatars and collaborate online as if it were in-person.
@@ -16,7 +16,14 @@ function HeroBanner() {
                 <HeroLeftButton>SCHEDULE A DEMO</HeroLeftButton>
             </HeroLeftDiv>
             <HeroRightDiv>
-                <HeroRightVideoDefault/>
+
+                <HeroRightVideoDefault>
+                    <HeroRightVideoButton >
+                        <HeroRightVideoButtonArrow />
+                    </HeroRightVideoButton>
+
+                </HeroRightVideoDefault>
+
             </HeroRightDiv>
         </HeroDiv>
     )
