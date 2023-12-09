@@ -11,13 +11,13 @@ import videoButtonArrow from '@assets/Btn-arrow.png';
 import avatarImage from '@assets/img-herosession-avatar-mobile.png';
 import avatarMask from '@assets/bg-herosession-mask.png';
 
-const HeroUpperDiv = styled.div`
+const HeroBannerDiv = styled.div`
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
 `;
 
-const HeroDiv = styled.div`
+const HeroInfoDiv = styled.div`
     background-image: url(${heroImageLaptop});
     width: 100vw;
     height: 50.76vw;
@@ -41,7 +41,7 @@ const HeroDiv = styled.div`
 `;
 
 
-const HeroLeftDiv = styled.div`
+const HeroDescriptionDiv = styled.div`
     box-sizing: border-box;
     width: 41.45%;
     display: flex;
@@ -60,19 +60,22 @@ const HeroLeftDiv = styled.div`
         justify-content: flex-start;
         margin: 32.8vw 15vw 0 15vw;
         height: 109.6vw;
-        gap: 0;
+        gap: 0.5em;
     }
-    @media (max-width: 355px) {
-        margin: 25vw 15vw 0 15vw;
+    @media (max-width: 480px) {
+        margin: 25vw 10vw 0 10vw;
+    }
+    @media (max-width: 350px) {
+       gap: 0em;
     }
 `;
 
-const HeroLeftTitle = styled.div`
+const HeroDescriptionTitleDiv = styled.div`
     font-size:60px;
     font-weight: 700;
-    width: 80%;
+    width: 90%;
     word-wrap: break-word;
-    line-height: 1;
+    line-height: 1.2;
     @media (max-width: 1680px) {
         font-size: 52px;
     }
@@ -98,7 +101,7 @@ const HeroLeftTitle = styled.div`
     }
 `;
 
-const HeroLeftContent = styled.div`
+const HeroDescriptionContentDiv = styled.div`
     font-size: 32px;
     font-weight: 400;
     word-wrap: break-word;
@@ -118,15 +121,19 @@ const HeroLeftContent = styled.div`
         font-size: 14px;
     }
     @media (max-width: 680px) {
-        width: 96%;
         text-align: center;
+        width: 70%;
     }
     @media (max-width: 480px) {
+        width: 84%;
         font-size: 12px;
+    }
+    @media (max-width: 350px) {
+        width: 100%;
     }
 `;
 
-const HeroLeftButton = styled.button`
+const HeroDescriptionDemoButton = styled.button`
     padding: 6px 16px 6px 16px;
     background: linear-gradient(152deg, #F7DC16 0%, #F7DC16 0%, #FF2A2D 100%);
     border-radius: 26pt;
@@ -142,7 +149,7 @@ const HeroLeftButton = styled.button`
         height: 36px;
         width: 206px;
     }
-    @media (max-width: 355px) {
+    @media (max-width: 480px) {
         margin: 6vw 0 0 0;
     }
 
@@ -152,7 +159,7 @@ const HeroLeftButton = styled.button`
     }
 `;
 
-const HeroRightDiv = styled.div`
+const HeroMediaDiv = styled.div`
     box-sizing: border-box;
     flex-grow: 1;
     display: grid;
@@ -171,7 +178,7 @@ const HeroRightDiv = styled.div`
     }
 `;
 
-const HeroRightVideoDefault = styled.div`
+const HeroMediaDefaultDiv = styled.div`
     aspect-ratio: calc(669/452);
     background-image: url(${videoImageLaptop});
     background-position: center;
@@ -191,7 +198,7 @@ const HeroRightVideoDefault = styled.div`
     }
 `;
 
-const HeroRightVideoButton = styled.button`
+const HeroMediaPlayButton = styled.button`
     width: 20%;
     aspect-ratio: 1;
     background-image: url(${videoButtonDefault});
@@ -211,7 +218,7 @@ const HeroRightVideoButton = styled.button`
     }
 `;
 
-const HeroRightVideoButtonArrow = styled.div`
+const HeroMediaPlayArrowDiv = styled.div`
     width: 39.13%;
     aspect-ratio: calc(159/177);
     background-image: url(${videoButtonArrow});
@@ -220,7 +227,7 @@ const HeroRightVideoButtonArrow = styled.div`
     background-size:contain;
 `;
 
-const HeroRightAvatar = styled.div`
+const HeroAvatarDiv = styled.div`
     background-image: url(${avatarImage});
     width: 100vw;
     height: 50.76vw;
@@ -245,6 +252,6 @@ const HeroRightAvatar = styled.div`
 
 
 export {
-    HeroUpperDiv, HeroDiv, HeroLeftDiv, HeroLeftTitle, HeroLeftContent, HeroLeftButton,
-    HeroRightDiv, HeroRightVideoDefault, HeroRightVideoButton, HeroRightVideoButtonArrow, HeroRightAvatar
+    HeroBannerDiv, HeroInfoDiv, HeroDescriptionDiv, HeroDescriptionTitleDiv, HeroDescriptionContentDiv, HeroDescriptionDemoButton,
+    HeroMediaDiv, HeroMediaDefaultDiv, HeroMediaPlayButton, HeroMediaPlayArrowDiv, HeroAvatarDiv as HeroAvatarDiv
 };
