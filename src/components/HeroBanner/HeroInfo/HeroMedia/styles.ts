@@ -6,6 +6,7 @@ import videoImageMobile from '@assets/img-videodefault-mobile.png';
 import videoButtonDefault from '@assets/Btn-default.png';
 import videoButtonHover from '@assets/Btn-hover.png';
 import videoButtonArrow from '@assets/Btn-arrow.png';
+import ReactPlayer from 'react-player';
 
 export const HeroMediaDiv = styled.div`
     box-sizing: border-box;
@@ -32,10 +33,8 @@ export const HeroMediaDefaultDiv = styled.div`
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
-
     grid-column: 1;
     grid-row: 1;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -75,3 +74,23 @@ export const HeroMediaPlayArrowDiv = styled.div`
     background-size:contain;
 `;
 
+export const HeroMediaVideoMask = styled.div`
+    width: auto;
+    aspect-ratio: calc(669/452);
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+    border-radius: 40pt ; 
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    @media (max-width: 680px) {
+        width: 93.6vw;
+        aspect-ratio: calc(351/205);
+    }
+`
+
+export const HeroMediaVideoPlayer = styled(ReactPlayer).attrs(() => ({
+    width: '100%',
+    height: '100%',
+}))``;
