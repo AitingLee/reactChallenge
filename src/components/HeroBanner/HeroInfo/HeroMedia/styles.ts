@@ -38,12 +38,12 @@ export const HeroMediaDefaultDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 40pt; 
+    border-radius: 40px; 
     @media (max-width: 680px) {
         width: 93.6vw;
         aspect-ratio: calc(351/205);
         background-image: url(${videoImageMobile});
-        border-radius: 30pt; 
+        border-radius: 30px; 
     }
 `;
 
@@ -81,14 +81,14 @@ export const HeroMediaVideoMask = styled.div`
     grid-column: 1;
     grid-row: 1;
     overflow: hidden;
-    border-radius: 40pt; 
+    border-radius: 40px; 
     display: flex;
     align-items: stretch;
     justify-content: stretch;
     @media (max-width: 680px) {
         width: 93.6vw;
         aspect-ratio: calc(351/205);
-        border-radius: 30pt; 
+        border-radius: 30px; 
     }
 `
 

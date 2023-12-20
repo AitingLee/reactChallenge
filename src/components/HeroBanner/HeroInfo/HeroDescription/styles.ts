@@ -95,7 +95,7 @@ export const HeroDescriptionContentDiv = styled.div`
 export const HeroDescriptionDemoButton = styled.button`
     padding: 6px 16px 6px 16px;
     background: linear-gradient(152deg, #F7DC16 0%, #F7DC16 0%, #FF2A2D 100%);
-    border-radius: 26pt;
+    border-radius: 26px;
     font-weight: 700;
     border-width: 0;
     height: 47px;
