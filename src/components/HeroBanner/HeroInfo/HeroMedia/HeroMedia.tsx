@@ -1,4 +1,4 @@
-import { HeroMediaPlayArrowDiv, HeroMediaPlayButton, HeroMediaDefaultDiv, HeroMediaDiv, HeroMediaVideoMask, HeroMediaVideoPlayer } from "@/components/HeroBanner/HeroInfo/HeroMedia/styles";
+import * as $ from "@/components/HeroBanner/HeroInfo/HeroMedia/styles";
 import { useState } from "react";
 import ReactPlayer from 'react-player'
 
@@ -7,19 +7,19 @@ function HeroMedia() {
     const [playing, setPlaying] = useState(false);
 
     return (
-        <HeroMediaDiv>
+        <$.HeroMediaDiv>
             {playing ?
-                <HeroMediaVideoMask>
-                    <HeroMediaVideoPlayer url='https://youtu.be/rAVeLbU_D7U?si=M6sklz_0SQ6zCBFv'
+                <$.HeroMediaVideoMask>
+                    <$.HeroMediaVideoPlayer url='https://youtu.be/rAVeLbU_D7U?si=M6sklz_0SQ6zCBFv'
                         playing={playing} onEnded={() => setPlaying(false)} />
-                </HeroMediaVideoMask> :
-                <HeroMediaDefaultDiv>
-                    <HeroMediaPlayButton onClick={() => setPlaying(true)}>
-                        <HeroMediaPlayArrowDiv />
-                    </HeroMediaPlayButton>
-                </HeroMediaDefaultDiv>
+                </$.HeroMediaVideoMask> :
+                <$.HeroMediaDefaultDiv>
+                    <$.HeroMediaPlayButton onClick={() => setPlaying(true)}>
+                        <$.HeroMediaPlayArrowDiv />
+                    </$.HeroMediaPlayButton>
+                </$.HeroMediaDefaultDiv>
             }
-        </HeroMediaDiv>
+        </$.HeroMediaDiv>
     )
 }
 
