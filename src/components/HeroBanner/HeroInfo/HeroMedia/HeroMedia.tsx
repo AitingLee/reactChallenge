@@ -4,17 +4,17 @@ import ReactPlayer from 'react-player'
 
 function HeroMedia() {
 
-    const [playing, setPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(false);
 
     return (
         <$.HeroMediaDiv>
-            {playing ?
+            {isPlaying ?
                 <$.HeroMediaVideoMask>
                     <$.HeroMediaVideoPlayer url='https://youtu.be/rAVeLbU_D7U?si=M6sklz_0SQ6zCBFv'
-                        playing={playing} onEnded={() => setPlaying(false)} />
+                        playing={isPlaying} onEnded={() => setIsPlaying(false)} />
                 </$.HeroMediaVideoMask> :
                 <$.HeroMediaDefaultDiv>
-                    <$.HeroMediaPlayButton onClick={() => setPlaying(true)}>
+                    <$.HeroMediaPlayButton onClick={() => setIsPlaying(true)}>
                         <$.HeroMediaPlayArrowDiv />
                     </$.HeroMediaPlayButton>
                 </$.HeroMediaDefaultDiv>
