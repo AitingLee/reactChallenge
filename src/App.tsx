@@ -1,10 +1,9 @@
-import '@/App.css'
-import ColorfulCounter from '@components/ColorfulCounter/ColorfulCounter'
+import HeroBanner from "@/components/HeroBanner/HeroBanner"
 
 function App() {
 
   return (
-      <ColorfulCounter/>
+    <HeroBanner />
   )
 }
 
